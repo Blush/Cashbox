@@ -32,9 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.gridProducts = new System.Windows.Forms.DataGridView();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.basketProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.listStoredProducts = new System.Windows.Forms.ComboBox();
@@ -56,13 +53,9 @@
             this.lblPriceName = new System.Windows.Forms.Label();
             this.lblCodeValue = new System.Windows.Forms.Label();
             this.lblCodeName = new System.Windows.Forms.Label();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.restsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.basketProductBindingSource)).BeginInit();
@@ -97,21 +90,12 @@
             this.gridProducts.AllowUserToDeleteRows = false;
             this.gridProducts.AllowUserToResizeColumns = false;
             this.gridProducts.AllowUserToResizeRows = false;
-            this.gridProducts.AutoGenerateColumns = false;
             this.gridProducts.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.gridProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colName,
             this.colCount,
-            this.colSum,
-            this.codeDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.sumDataGridViewTextBoxColumn,
-            this.countDataGridViewTextBoxColumn,
-            this.restsDataGridViewTextBoxColumn,
-            this.idDataGridViewTextBoxColumn});
-            this.gridProducts.DataSource = this.basketProductBindingSource;
+            this.colSum});
             this.gridProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridProducts.Location = new System.Drawing.Point(0, 39);
             this.gridProducts.Margin = new System.Windows.Forms.Padding(4);
@@ -121,27 +105,6 @@
             this.gridProducts.Size = new System.Drawing.Size(985, 578);
             this.gridProducts.TabIndex = 1;
             this.gridProducts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridProducts_KeyDown);
-            // 
-            // colName
-            // 
-            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colName.DataPropertyName = "Name";
-            this.colName.HeaderText = "Наименование";
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            // 
-            // colCount
-            // 
-            this.colCount.DataPropertyName = "Count";
-            this.colCount.HeaderText = "Количество";
-            this.colCount.Name = "colCount";
-            // 
-            // colSum
-            // 
-            this.colSum.DataPropertyName = "Sum";
-            this.colSum.HeaderText = "Сумма";
-            this.colSum.Name = "colSum";
-            this.colSum.ReadOnly = true;
             // 
             // basketProductBindingSource
             // 
@@ -372,48 +335,26 @@
             this.lblCodeName.TabIndex = 6;
             this.lblCodeName.Text = "Код :";
             // 
-            // codeDataGridViewTextBoxColumn
+            // colName
             // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colName.DataPropertyName = "Name";
+            this.colName.HeaderText = "Наименование";
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
             // 
-            // nameDataGridViewTextBoxColumn
+            // colCount
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.colCount.DataPropertyName = "Count";
+            this.colCount.HeaderText = "Количество";
+            this.colCount.Name = "colCount";
             // 
-            // priceDataGridViewTextBoxColumn
+            // colSum
             // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // sumDataGridViewTextBoxColumn
-            // 
-            this.sumDataGridViewTextBoxColumn.DataPropertyName = "Sum";
-            this.sumDataGridViewTextBoxColumn.HeaderText = "Sum";
-            this.sumDataGridViewTextBoxColumn.Name = "sumDataGridViewTextBoxColumn";
-            this.sumDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // countDataGridViewTextBoxColumn
-            // 
-            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
-            this.countDataGridViewTextBoxColumn.HeaderText = "Count";
-            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
-            // 
-            // restsDataGridViewTextBoxColumn
-            // 
-            this.restsDataGridViewTextBoxColumn.DataPropertyName = "Rests";
-            this.restsDataGridViewTextBoxColumn.HeaderText = "Rests";
-            this.restsDataGridViewTextBoxColumn.Name = "restsDataGridViewTextBoxColumn";
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.colSum.DataPropertyName = "Sum";
+            this.colSum.HeaderText = "Сумма";
+            this.colSum.Name = "colSum";
+            this.colSum.ReadOnly = true;
             // 
             // Products
             // 
@@ -470,12 +411,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sumDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn restsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
     }
 }
